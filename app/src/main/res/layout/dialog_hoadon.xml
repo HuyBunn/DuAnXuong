@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="370dp"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_vertical"
+    android:padding="10dp"
+    >
+    <TextView
+        android:id="@+id/txtmahd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/bar"
+        android:text=""
+        android:paddingLeft="5dp"
+        android:textSize="20dp" />
+    <RadioGroup
+        android:id="@+id/radio_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:paddingLeft="5dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:text="Loại hóa đơn: "
+            android:textSize="20dp" />
+
+        <RadioButton
+            android:id="@+id/rdoNhap"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/bar"
+            android:text="Nhập" />
+
+        <RadioButton
+            android:id="@+id/rdoXuat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:buttonTint="@color/bar"
+            android:text="Xuất" />
+
+    </RadioGroup>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:paddingLeft="8dp"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:text="Người tạo: "/>
+    <TextView
+        android:id="@+id/txtthukho"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:paddingLeft="8dp"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:text="Ngày: "/>
+        <TextView
+            android:id="@+id/txtngay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnXacNhan"
+            android:layout_width="120dp"
+            android:layout_height="40dp"
+            android:layout_margin="20dp"
+            android:background="@drawable/khung_login"
+            android:text="Xác nhận"
+            android:textColor="@color/bar" />
+
+        <Button
+            android:id="@+id/btnHuy"
+            android:layout_width="120dp"
+            android:layout_height="40dp"
+            android:layout_margin="20dp"
+            android:background="@drawable/khung_login"
+            android:text="Hủy"
+            android:textColor="@color/bar" />
+    </LinearLayout>
+</LinearLayout>

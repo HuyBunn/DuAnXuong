@@ -3,12 +3,27 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".frg_sp">
+    tools:context=".Fragment.frg_sp">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <ListView
+        android:layout_marginTop="70dp"
+        android:id="@+id/LvSP"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        tools:listitem="@layout/item_sanpham"
+        android:padding="10dp"
+        android:dividerHeight="10dp"
+        android:background="@color/white"
+        android:divider="@color/white"
+        android:layout_height="wrap_content" />
 
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fltAdd_SP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/baseline_add_24"
+        android:backgroundTint="@color/bar"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="15dp"
+        android:layout_gravity="end|bottom"/>
 </FrameLayout>

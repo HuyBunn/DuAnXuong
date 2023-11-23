@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    android:orientation="horizontal"
+    android:background="@drawable/khung_item"
+    >
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_weight="7"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="2"
+            android:orientation="horizontal">
+        <TextView
+            android:id="@+id/txtmahd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mã hóa đơn: 8"
+            android:textStyle="bold"
+            android:layout_weight="1"
+            android:textColor="@color/bar"
+            android:textSize="17dp"/>
+            <TextView
+                android:id="@+id/txtloaihd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Loại hóa đơn: 8"
+                android:layout_weight="1"
+                android:textColor="@color/black"
+                android:textSize="16dp" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="2"
+            android:orientation="horizontal">
+        <TextView
+            android:id="@+id/txtmaUser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Thủ kho: 8"
+            android:layout_weight="1"
+            android:textColor="@color/black"
+            android:textSize="16dp" />
+        <TextView
+            android:id="@+id/txtngay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ngày: 8"
+            android:layout_weight="1"
+            android:textColor="@color/black"
+            android:textSize="16dp" />
+    </LinearLayout>
+    </LinearLayout>
+    <ImageView
+        android:id="@+id/btnxoa"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:background="@drawable/xoa"
+        android:gravity="center_vertical"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="15dp"
+        />
+
+</LinearLayout>

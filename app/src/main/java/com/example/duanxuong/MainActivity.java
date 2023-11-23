@@ -15,6 +15,15 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.duanxuong.Dao.UserDao;
+import com.example.duanxuong.Fragment.frg_cthoadon;
+import com.example.duanxuong.Fragment.frg_dmk;
+import com.example.duanxuong.Fragment.frg_hoadon;
+import com.example.duanxuong.Fragment.frg_loai;
+import com.example.duanxuong.Fragment.frg_sp;
+import com.example.duanxuong.Fragment.frg_thongke;
+import com.example.duanxuong.Fragment.frg_ttk;
+import com.example.duanxuong.Model.User;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 import com.google.android.material.navigation.NavigationView;
@@ -24,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
     Toolbar toolbar;
     NavigationView nav;
     BottomNavigationView bottom_menu;
+    UserDao dao;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,22 +45,24 @@ public class MainActivity extends AppCompatActivity {
         bottom_menu=findViewById(R.id.menu_bot);
         View view = nav.getHeaderView(0);
         TextView tvUser = view.findViewById(R.id.tvUser);
+
         Intent intent = getIntent();
         String user = intent.getStringExtra("user");
         if(user.equalsIgnoreCase("admin")){
             nav.getMenu().findItem(R.id.nav_taotaikhoan).setVisible(true);
         }else {
-//            dao = new thuthuDao(this);
-//            thuthu tt = dao.getID(user);
-//            String username = tt.getHoTenTT();
-//            tvUser.setText("Welcome "+username);
+            nav.getMenu().findItem(R.id.nav_doimatkhau).setVisible(true);
+            dao = new UserDao(this);
+            User u = dao.getID(user);
+            String username = u.getFullName();
+            tvUser.setText("Welcome "+username);
         }
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.open, R.string.close);
         drawerLayout.addDrawerListener(toggle);
         toggle.syncState();
         nav.setItemIconTintList(null);
         frg_sp pm = new frg_sp();
-        setTitle("Quản lý sản phẩm");
+        setTitle("Sản phẩm");
         Toast.makeText(this, "Chào mừng đến với trang chủ", Toast.LENGTH_SHORT).show();
         replaceFrg(pm);
         nav.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
@@ -85,8 +97,11 @@ public class MainActivity extends AppCompatActivity {
                     setTitle("Sản phẩm");
                     replaceFrg(sp);
                 }else if (item.getItemId()==R.id.nav_hoadon){
+                    Bundle bundle = new Bundle();
+                    bundle.putString("usernamedn",user);
                     frg_hoadon hoadon = new frg_hoadon();
                     setTitle("Hóa đơn");
+                    hoadon.setArguments(bundle);
                     replaceFrg(hoadon);
                 }else if (item.getItemId()==R.id.nav_CThoadon){
                     frg_cthoadon ct = new frg_cthoadon();

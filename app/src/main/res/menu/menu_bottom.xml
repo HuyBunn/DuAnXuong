@@ -1,18 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:id="@+id/nav_hoadon"
+    <item
+        android:id="@+id/nav_sp"
+        android:title="Sản phẩm"
+        android:icon="@drawable/sp"/>
+    <item
+    android:id="@+id/nav_loai"
+    android:title="Loại"
+    android:icon="@drawable/loai"/>
+    <item
+        android:id="@+id/nav_hoadon"
         android:title="Hóa đơn"
         android:icon="@drawable/bill" />
     <item
         android:id="@+id/nav_CThoadon"
         android:title="CT hóa đơn"
         android:icon="@drawable/bill"/>
-    <item
-        android:id="@+id/nav_loai"
-        android:title="Loại"
-        android:icon="@drawable/loai"/>
-    <item
-        android:id="@+id/nav_sp"
-        android:title="Sản phẩm"
-        android:icon="@drawable/sp"/>
+
+
 </menu>
